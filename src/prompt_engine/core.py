@@ -37,3 +37,5 @@ LOOP_PATTERN: re.Pattern[str] = re.compile(
 class RenderResult:
     template_name: str
     prompt: str
+    variables_used: tuple[str, ...]
+    token_estimate: int
