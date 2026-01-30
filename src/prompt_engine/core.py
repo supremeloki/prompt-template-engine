@@ -35,3 +35,5 @@ LOOP_PATTERN: re.Pattern[str] = re.compile(
 
 @dataclass(frozen=True)
 class RenderResult:
+    template_name: str
+    prompt: str
