@@ -39,3 +39,4 @@ class RenderResult:
     prompt: str
     variables_used: tuple[str, ...]
     token_estimate: int
+
