@@ -40,3 +40,5 @@ class RenderResult:
     variables_used: tuple[str, ...]
     token_estimate: int
 
+
+def extract_variables(template: str) -> set[str]:
