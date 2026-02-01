@@ -44,3 +44,5 @@ class RenderResult:
 def extract_variables(template: str) -> set[str]:
     return set(VARIABLE_PATTERN.findall(template))
 
+
+class PromptTemplate:
