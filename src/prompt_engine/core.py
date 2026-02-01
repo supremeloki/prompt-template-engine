@@ -46,3 +46,5 @@ def extract_variables(template: str) -> set[str]:
 
 
 class PromptTemplate:
+    def __init__(self, name: str, body: str,
+                 validators: dict[str, Callable[[Any], bool]] | None = None) -> None:
