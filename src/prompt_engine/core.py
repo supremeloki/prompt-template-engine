@@ -54,3 +54,5 @@ class PromptTemplate:
 
     @property
     def required_variables(self) -> set[str]:
+        stripped = LOOP_PATTERN.sub(" ", self.body)
+        stripped = CONDITIONAL_PATTERN.sub(" ", stripped)
