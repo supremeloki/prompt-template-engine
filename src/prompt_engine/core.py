@@ -52,3 +52,5 @@ class PromptTemplate:
         self.body = body
         self.validators = validators or {}
 
+    @property
+    def required_variables(self) -> set[str]:
