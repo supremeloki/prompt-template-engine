@@ -50,3 +50,5 @@ class PromptTemplate:
                  validators: dict[str, Callable[[Any], bool]] | None = None) -> None:
         self.name = name
         self.body = body
+        self.validators = validators or {}
+
