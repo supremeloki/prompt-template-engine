@@ -60,3 +60,5 @@ class PromptTemplate:
 
     @property
     def accepted_variables(self) -> set[str]:
+        accepted = extract_variables(self.body)
+        for match in CONDITIONAL_PATTERN.finditer(self.body):
