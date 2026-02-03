@@ -58,3 +58,5 @@ class PromptTemplate:
         stripped = CONDITIONAL_PATTERN.sub(" ", stripped)
         return extract_variables(stripped)
 
+    @property
+    def accepted_variables(self) -> set[str]:
