@@ -64,3 +64,5 @@ class PromptTemplate:
         for match in CONDITIONAL_PATTERN.finditer(self.body):
             accepted.add(match.group(1))
         for match in LOOP_PATTERN.finditer(self.body):
+            accepted.add(match.group(1))
+            accepted.add(match.group(2))
