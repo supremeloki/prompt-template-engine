@@ -66,3 +66,5 @@ class PromptTemplate:
         for match in LOOP_PATTERN.finditer(self.body):
             accepted.add(match.group(1))
             accepted.add(match.group(2))
+        return accepted
+
