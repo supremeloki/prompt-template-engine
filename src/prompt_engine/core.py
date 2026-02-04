@@ -62,3 +62,5 @@ class PromptTemplate:
     def accepted_variables(self) -> set[str]:
         accepted = extract_variables(self.body)
         for match in CONDITIONAL_PATTERN.finditer(self.body):
+            accepted.add(match.group(1))
+        for match in LOOP_PATTERN.finditer(self.body):
