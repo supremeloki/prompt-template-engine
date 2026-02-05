@@ -71,3 +71,5 @@ class PromptTemplate:
     def validate(self, context: dict[str, Any]) -> list[str]:
         failures: list[str] = []
         for variable, validator in self.validators.items():
+            if variable in context and not validator(context[variable]):
+                failures.append(variable)
