@@ -69,3 +69,5 @@ class PromptTemplate:
         return accepted
 
     def validate(self, context: dict[str, Any]) -> list[str]:
+        failures: list[str] = []
+        for variable, validator in self.validators.items():
