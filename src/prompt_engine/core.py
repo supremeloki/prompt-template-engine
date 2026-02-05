@@ -68,3 +68,4 @@ class PromptTemplate:
             accepted.add(match.group(2))
         return accepted
 
+    def validate(self, context: dict[str, Any]) -> list[str]:
