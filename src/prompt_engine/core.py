@@ -75,3 +75,5 @@ class PromptTemplate:
                 failures.append(variable)
         return failures
 
+    def render(self, context: dict[str, Any] | None = None) -> str:
+        context = context or {}
