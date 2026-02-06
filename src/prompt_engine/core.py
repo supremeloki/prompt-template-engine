@@ -77,3 +77,5 @@ class PromptTemplate:
 
     def render(self, context: dict[str, Any] | None = None) -> str:
         context = context or {}
+        missing = self.required_variables - set(context)
+        if missing:
