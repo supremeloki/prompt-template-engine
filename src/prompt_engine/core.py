@@ -73,3 +73,5 @@ class PromptTemplate:
         for variable, validator in self.validators.items():
             if variable in context and not validator(context[variable]):
                 failures.append(variable)
+        return failures
+
