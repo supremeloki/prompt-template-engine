@@ -81,3 +81,5 @@ class PromptTemplate:
         if missing:
             raise MissingVariableError(missing)
         unknown = set(context) - self.accepted_variables
+        if unknown:
+            raise UnknownVariableError(unknown)
