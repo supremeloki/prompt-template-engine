@@ -87,3 +87,5 @@ class PromptTemplate:
         if failed:
             raise PromptEngineError(f"validation failed for: {', '.join(failed)}")
         return expand_loops(self.body, expand_conditionals(self.body, context), context)
+
+    def render_with_report(self, context: dict[str, Any] | None = None) -> RenderResult:
