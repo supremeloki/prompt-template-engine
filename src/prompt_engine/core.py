@@ -83,3 +83,5 @@ class PromptTemplate:
         unknown = set(context) - self.accepted_variables
         if unknown:
             raise UnknownVariableError(unknown)
+        failed = self.validate(context)
+        if failed:
