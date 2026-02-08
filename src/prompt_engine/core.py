@@ -85,3 +85,5 @@ class PromptTemplate:
             raise UnknownVariableError(unknown)
         failed = self.validate(context)
         if failed:
+            raise PromptEngineError(f"validation failed for: {', '.join(failed)}")
+        return expand_loops(self.body, expand_conditionals(self.body, context), context)
