@@ -91,3 +91,5 @@ class PromptTemplate:
     def render_with_report(self, context: dict[str, Any] | None = None) -> RenderResult:
         prompt = self.render(context)
         return RenderResult(
+            template_name=self.name,
+            prompt=prompt,
