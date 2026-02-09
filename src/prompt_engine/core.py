@@ -89,3 +89,5 @@ class PromptTemplate:
         return expand_loops(self.body, expand_conditionals(self.body, context), context)
 
     def render_with_report(self, context: dict[str, Any] | None = None) -> RenderResult:
+        prompt = self.render(context)
+        return RenderResult(
