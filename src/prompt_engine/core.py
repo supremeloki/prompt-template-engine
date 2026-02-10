@@ -93,3 +93,5 @@ class PromptTemplate:
         return RenderResult(
             template_name=self.name,
             prompt=prompt,
+            variables_used=tuple(sorted((context or {}).keys())),
+            token_estimate=len(prompt.split()),
