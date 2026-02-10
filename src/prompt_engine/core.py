@@ -95,3 +95,4 @@ class PromptTemplate:
             prompt=prompt,
             variables_used=tuple(sorted((context or {}).keys())),
             token_estimate=len(prompt.split()),
+        )
