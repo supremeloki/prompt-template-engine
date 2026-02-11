@@ -100,3 +100,5 @@ class PromptTemplate:
 
 def _resolve_sections(body: str, context: dict[str, Any],
                       keep: Callable[[str], bool]) -> str:
+    def replace(match: re.Match[str]) -> str:
+        return match.group(2) if keep(match.group(1)) else ""
