@@ -98,3 +98,5 @@ class PromptTemplate:
         )
 
 
+def _resolve_sections(body: str, context: dict[str, Any],
+                      keep: Callable[[str], bool]) -> str:
