@@ -63,3 +63,4 @@ def test_validator_blocks_bad_value():
 
 
 def test_render_report_counts_tokens():
+    template = PromptTemplate("report", "one two three {{x}}")
