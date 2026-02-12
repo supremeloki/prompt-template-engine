@@ -62,3 +62,4 @@ def test_validator_blocks_bad_value():
     assert "33" in template.render({"age": 33})
 
 
+def test_render_report_counts_tokens():
