@@ -66,3 +66,5 @@ def test_render_report_counts_tokens():
     template = PromptTemplate("report", "one two three {{x}}")
     result = template.render_with_report({"x": "four"})
     assert result.token_estimate == 4
+    assert result.variables_used == ("x",)
+    assert result.template_name == "report"
