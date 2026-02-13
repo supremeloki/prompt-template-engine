@@ -68,3 +68,4 @@ def test_render_report_counts_tokens():
     assert result.token_estimate == 4
     assert result.variables_used == ("x",)
     assert result.template_name == "report"
+
