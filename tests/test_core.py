@@ -70,3 +70,4 @@ def test_render_report_counts_tokens():
     assert result.template_name == "report"
 
 
+def test_library_register_and_get():
