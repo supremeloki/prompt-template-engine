@@ -72,3 +72,4 @@ def test_render_report_counts_tokens():
 
 def test_library_register_and_get():
     library = TemplateLibrary()
+    library.register(PromptTemplate("summarize", "Summarize: {{text}}"))
