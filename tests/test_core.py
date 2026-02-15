@@ -76,3 +76,4 @@ def test_library_register_and_get():
     assert library.get("summarize").render({"text": "stuff"}) == "Summarize: stuff"
 
 
+def test_library_missing_template_raises():
