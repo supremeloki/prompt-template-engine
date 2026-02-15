@@ -75,3 +75,4 @@ def test_library_register_and_get():
     library.register(PromptTemplate("summarize", "Summarize: {{text}}"))
     assert library.get("summarize").render({"text": "stuff"}) == "Summarize: stuff"
 
+
