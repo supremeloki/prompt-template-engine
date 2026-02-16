@@ -78,3 +78,4 @@ def test_library_register_and_get():
 
 def test_library_missing_template_raises():
     with pytest.raises(TemplateNotFoundError):
+        TemplateLibrary().get("ghost")
