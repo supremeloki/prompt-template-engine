@@ -80,3 +80,5 @@ def test_library_missing_template_raises():
     with pytest.raises(TemplateNotFoundError):
         TemplateLibrary().get("ghost")
 
+
+def test_library_loads_from_directory(tmp_path):
