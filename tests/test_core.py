@@ -83,3 +83,4 @@ def test_library_missing_template_raises():
 
 def test_library_loads_from_directory(tmp_path):
     (tmp_path / "translate.md").write_text("Translate to {{lang}}: {{text}}",
+                                           encoding="utf-8")
