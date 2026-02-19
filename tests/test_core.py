@@ -87,3 +87,5 @@ def test_library_loads_from_directory(tmp_path):
     library = TemplateLibrary().load_directory(tmp_path)
     assert "translate" in library.names
     rendered = library.get("translate").render({"lang": "de", "text": "hello"})
+    assert "de" in rendered
+
