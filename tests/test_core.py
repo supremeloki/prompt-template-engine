@@ -89,3 +89,4 @@ def test_library_loads_from_directory(tmp_path):
     rendered = library.get("translate").render({"lang": "de", "text": "hello"})
     assert "de" in rendered
 
+
