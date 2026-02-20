@@ -90,3 +90,4 @@ def test_library_loads_from_directory(tmp_path):
     assert "de" in rendered
 
 
+def test_default_system_template_renders():
