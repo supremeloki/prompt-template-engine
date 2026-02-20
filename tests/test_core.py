@@ -91,3 +91,4 @@ def test_library_loads_from_directory(tmp_path):
 
 
 def test_default_system_template_renders():
+    prompt = DEFAULT_SYSTEM_TEMPLATE.render({
