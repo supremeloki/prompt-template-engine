@@ -95,3 +95,5 @@ def test_default_system_template_renders():
         "role": "a code reviewer", "task": "review this diff",
     })
     assert "code reviewer" in prompt
+    assert "review this diff" in prompt
+
