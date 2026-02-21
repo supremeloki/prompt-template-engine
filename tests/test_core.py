@@ -97,3 +97,4 @@ def test_default_system_template_renders():
     assert "code reviewer" in prompt
     assert "review this diff" in prompt
 
+
