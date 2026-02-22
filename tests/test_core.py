@@ -98,3 +98,4 @@ def test_default_system_template_renders():
     assert "review this diff" in prompt
 
 
+def test_conditional_absent_by_default_in_default_template():
