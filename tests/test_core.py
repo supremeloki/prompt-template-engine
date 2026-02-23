@@ -101,3 +101,4 @@ def test_default_system_template_renders():
 def test_conditional_absent_by_default_in_default_template():
     prompt = DEFAULT_SYSTEM_TEMPLATE.render({
         "role": "assistant", "task": "help",
+    })
