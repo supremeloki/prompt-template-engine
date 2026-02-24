@@ -105,3 +105,4 @@ def test_conditional_absent_by_default_in_default_template():
     assert "tone" not in prompt
 
 
+def test_required_variables_property():
