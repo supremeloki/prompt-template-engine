@@ -106,3 +106,4 @@ def test_conditional_absent_by_default_in_default_template():
 
 
 def test_required_variables_property():
+    template = PromptTemplate("multi", "{{a}} {{b}} {% if c %}{{d}}{% endif %}")
